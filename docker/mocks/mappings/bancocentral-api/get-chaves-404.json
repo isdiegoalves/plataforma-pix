@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathTemplate": "/bancocentral-api/v1/chaves",
+    "queryParameters": {
+      "chaveId": {
+        "matches": "^.*x$"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "bodyFileName": "bancocentral-api/get-chaves-404.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

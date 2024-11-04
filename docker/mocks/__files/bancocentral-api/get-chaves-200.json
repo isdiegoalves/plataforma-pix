@@ -1,0 +1,8 @@
+{
+  "data": {
+    "chave": "{{request.query.chaveId}}",
+    "tipo": "CPF",
+    "ativa": true,
+    "criadoEm": "{{now}}"
+  }
+}

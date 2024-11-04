@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathTemplate": "/fraud-api/v1/verify-risk",
+    "queryParameters": {
+      "chaveId": {
+        "matches": ".+"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "fraud-api/get-verify-fraud-risk-200.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

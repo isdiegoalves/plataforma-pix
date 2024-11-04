@@ -1,0 +1,9 @@
+{
+  "data": null,
+  "errors": [
+    {
+      "code": "404",
+      "message": "Chave não encontrada"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+name: docker-compose-pix
+
+services:
+  
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_pix
+    networks:
+      - pix-network
+    extra_hosts: [ 'host.docker.internal:host-gateway' ]
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@pix.br
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    ports:
+      - '16543:80'
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17
+    container_name: postgres_pix
+    networks:
+      - pix-network
+    extra_hosts: [ 'host.docker.internal:host-gateway' ]
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker/postgres-data/create-postgres-db.sh:/docker-entrypoint-initdb.d/create-postgres-db.sh:z,ro
+      - ./docker/postgres-data/init-postgres-db.sh:/docker-entrypoint-initdb.d/init-postgres-db.sh:z,ro
+    restart: unless-stopped
+
+  wiremock:
+    image: holomekc/wiremock-gui:3.8.49
+    container_name: wiremock_pix
+    networks:
+      - pix-network
+    extra_hosts: [ 'host.docker.internal:host-gateway' ]
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./docker/mocks/mappings:/home/wiremock/mappings
+      - ./docker/mocks/__files:/home/wiremock/__files
+    command: --global-response-templating --verbose
+    environment:
+      WIREMOCK_OPTIONS: "--root-dir=/home/wiremock"
+
+volumes:
+  postgres-data:
+
+networks:
+  pix-network:

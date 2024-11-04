@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/pix-receive/v1/pix"
+  },
+  "response": {
+    "status": 201,
+    "body": "{ \"message\": \"Pix enviado com sucesso\", \"transactionId\": \"12345\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  },
+  "postServeActions": {
+    "webhook": {
+      "url": "http://host.docker.internal:8080/pix-api/v1/pix/receive",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": "{ \"source_holder\": \"00961480122\" , \"destination_holder\": \"11122233300\" , \"amount\": 100 , \"created_at\": \"{{now  format='yyyy-MM-dd HH:mm:ssZ'}}\" }"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-package br.bancoti.plataformapix.service;
+package br.bancofamilia.pix.service;
 
 import org.springframework.stereotype.Service;
 

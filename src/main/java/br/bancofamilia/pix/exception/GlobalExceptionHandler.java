@@ -1,6 +1,6 @@
-package br.bancoti.plataformapix.exception;
+package br.bancofamilia.pix.exception;
 
-import br.bancoti.plataformapix.dto.response.ApiMessageErrorResponseDTO;
+import br.bancofamilia.pix.dto.response.ApiMessageErrorResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

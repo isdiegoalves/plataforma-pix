@@ -1,8 +1,8 @@
-package br.bancoti.plataformapix.controller;
+package br.bancofamilia.pix.controller;
 
-import br.bancoti.plataformapix.dto.ContaDTO;
-import br.bancoti.plataformapix.service.ContaService;
-import br.bancoti.plataformapix.service.PixService;
+import br.bancofamilia.pix.dto.ContaDTO;
+import br.bancofamilia.pix.service.ContaService;
+import br.bancofamilia.pix.service.PixService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

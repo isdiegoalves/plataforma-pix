@@ -29,6 +29,20 @@ A arquitetura da API é organizada em camadas (layers), o que separa responsabil
 - **VO (Value Object)**: 📦 Objetos imutáveis que representam valores.
 - **Repository**: 📚 Interfaces que estendem `JpaRepository` para acesso a dados.
 
+## Executando o Docker Compose 🚀
+
+Para iniciar os serviços Docker, incluindo PostgreSQL, pgAdmin e WireMock, execute o seguinte comando na raiz do projeto:
+
+```bash
+docker-compose up -d
+```
+
+Este comando inicia os containers em segundo plano. Para parar os containers, use:
+
+```bash
+docker-compose down
+```
+
 ## Acessando o WireMock e o pgAdmin 🔧
 
 ### WireMock
@@ -51,19 +65,6 @@ http://localhost:16543
 - **Email**: `postgres@pix.br`
 - **Senha**: `postgres`
 
-## Executando o Docker Compose 🚀
-
-Para iniciar os serviços Docker, incluindo PostgreSQL, pgAdmin e WireMock, execute o seguinte comando na raiz do projeto:
-
-```bash
-docker-compose up -d
-```
-
-Este comando inicia os containers em segundo plano. Para parar os containers, use:
-
-```bash
-docker-compose down
-```
 
 ## Objetivo do Projeto 🎯
 
@@ -91,7 +92,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 A arquitetura do sistema é visualizada no diagrama abaixo, que ilustra a interação entre os componentes do Banco da Família e o Banco Central para a realização das operações PIX.
 
-![Diagrama de Arquitetura](docs/arquitetura/banco-familia-monilito.png)
+![Diagrama de Arquitetura](docs/arquitetura/banco-familia-monolito.png)
 
 ## Chamadas cURL 📞
 
@@ -197,6 +198,23 @@ curl -X GET "http://localhost:8081/__admin/webapp/bancocentral-api/v1/chaves?cha
 ```bash
 curl -X POST http://localhost:8081/__admin/webapp/pix/v1/send -H "User-Agent: insomnia/10.1.1"
 ```
+
+---
+
+## Referências 📚
+
+Aqui estão alguns links úteis para as tecnologias utilizadas no projeto:
+
+- [Documentação do Java 17](https://docs.oracle.com/en/java/javase/17/)
+- [Documentação do Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+- [Documentação do Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+- [Documentação do PostgreSQL](https://www.postgresql.org/docs/)
+- [Documentação do Flyway](https://flywaydb.org/documentation/)
+  - [Introdução a Migrations do Flyway](https://documentation.red-gate.com/fd/migrations-184127470.html)
+- [Documentação do OpenFeign](https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/)
+- [Documentação do Resilience4J](https://resilience4j.readme.io/docs)
+- [Documentação do Docker](https://docs.docker.com/)
+- [Documentação do WireMock](http://wiremock.org/docs/)
 
 ---
 

@@ -1,4 +1,4 @@
-package br.bancoti.plataformapix.exception;
+package br.bancofamilia.pix.exception;
 
 public class ContaNaoEncontradaException extends RuntimeException {
     public ContaNaoEncontradaException(String message) {

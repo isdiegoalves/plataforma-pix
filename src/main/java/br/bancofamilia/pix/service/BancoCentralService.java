@@ -1,7 +1,7 @@
-package br.bancoti.plataformapix.service;
+package br.bancofamilia.pix.service;
 
-import br.bancoti.plataformapix.client.BancoCentralClient;
-import br.bancoti.plataformapix.vo.PIxKeyVo;
+import br.bancofamilia.pix.client.BancoCentralClient;
+import br.bancofamilia.pix.vo.PIxKeyVo;
 import org.springframework.stereotype.Service;
 
 @Service

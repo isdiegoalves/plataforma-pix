@@ -1,4 +1,4 @@
-package br.bancoti.plataformapix.dto;
+package br.bancofamilia.pix.dto;
 
 import java.util.UUID;
 

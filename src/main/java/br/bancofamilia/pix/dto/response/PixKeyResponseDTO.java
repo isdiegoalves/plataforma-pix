@@ -1,4 +1,4 @@
-package br.bancoti.plataformapix.dto.response;
+package br.bancofamilia.pix.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

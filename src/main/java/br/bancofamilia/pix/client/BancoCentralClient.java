@@ -1,6 +1,6 @@
-package br.bancoti.plataformapix.client;
+package br.bancofamilia.pix.client;
 
-import br.bancoti.plataformapix.dto.response.PixKeyResponseDTO;
+import br.bancofamilia.pix.dto.response.PixKeyResponseDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

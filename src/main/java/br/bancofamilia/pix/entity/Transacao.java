@@ -1,4 +1,4 @@
-package br.bancoti.plataformapix.entity;
+package br.bancofamilia.pix.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

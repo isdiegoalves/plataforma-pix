@@ -1,6 +1,6 @@
-package br.bancoti.plataformapix.repository;
+package br.bancofamilia.pix.repository;
 
-import br.bancoti.plataformapix.entity.Transacao;
+import br.bancofamilia.pix.entity.Transacao;
 import org.springframework.data.repository.ListCrudRepository;
 
 import java.util.UUID;

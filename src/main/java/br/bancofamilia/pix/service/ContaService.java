@@ -1,9 +1,9 @@
-package br.bancoti.plataformapix.service;
+package br.bancofamilia.pix.service;
 
-import br.bancoti.plataformapix.dto.ContaDTO;
-import br.bancoti.plataformapix.entity.Conta;
-import br.bancoti.plataformapix.exception.ContaNaoEncontradaException;
-import br.bancoti.plataformapix.repository.ContaRepository;
+import br.bancofamilia.pix.dto.ContaDTO;
+import br.bancofamilia.pix.entity.Conta;
+import br.bancofamilia.pix.exception.ContaNaoEncontradaException;
+import br.bancofamilia.pix.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
